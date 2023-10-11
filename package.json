@@ -1,0 +1,11 @@
+{
+  "name": "sass-excercise",
+  "version": "1.0.0",
+  "description": "- Repository name: `sass-challenge` - Mode: `solo` - Type of Challenge: `exercise` - Duration: `1-2 days`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

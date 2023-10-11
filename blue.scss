@@ -3,10 +3,8 @@ $primary-color: #FFF2D8;
 $secondary-color: orange,;
 $tertiary-color: #CD5C08;
 $fourthiary-color: #862B0D;
-
 $myPadding: 16px;
-
-$bgcolor:#113946;
+$bgcolor: #6A9C89;
 
 @mixin box-shadow  {  
   -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
@@ -36,7 +34,7 @@ body {
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     background-attachment: fixed;
-   
+    
     .button {
       text-align: center;
       box-sizing: border-box;
@@ -50,17 +48,18 @@ body {
       overflow: auto;
       box-sizing: border-box;
       @include box-shadow;
-
-      a {
-        background-color: $primary-color;
-        $myPadding: 5px;
-        padding: $myPadding*2;
-        color: $bgcolor;
-        border-radius: 20px;
-        font-family: $font-stack;
-
+       
+  
+        a {
+          background-color:#c8c8c8;
+          $myPadding: 5px;
+          padding: $myPadding*2;
+          color: $bgcolor;
+          border-radius: 20px;
+          font-family: $font-stack;
+        }
       }
-    }
+
   }
 
 
