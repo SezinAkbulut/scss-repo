@@ -1,12 +1,13 @@
-$font-stack: "Space Mono", monospace;
-$primary-color: #FFF2D8;
-$secondary-color: orange,;
-$tertiary-color: #CD5C08;
-$fourthiary-color: #862B0D;
+
+@use 'color';
+@use 'font';
+
+$bgcolor:#113946;
+
 
 $myPadding: 16px;
 
-$bgcolor:#113946;
+
 
 @mixin box-shadow  {  
   -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
@@ -16,8 +17,8 @@ $bgcolor:#113946;
 
 
 body {
-    font: 100% $font-stack;
-    color: $primary-color;
+    font: 100% font.$font-stack;
+    color: color.$primary-color;
     margin: 0px;
     $myPadding: 0px;
     background-color: $bgcolor;
@@ -37,6 +38,8 @@ body {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     background-attachment: fixed;
    
+    /*Buttons*/
+
     .button {
       text-align: center;
       box-sizing: border-box;
@@ -51,13 +54,15 @@ body {
       box-sizing: border-box;
       @include box-shadow;
 
+     
+
       a {
-        background-color: $primary-color;
+        background-color: color.$primary-color;
         $myPadding: 5px;
         padding: $myPadding*2;
         color: $bgcolor;
         border-radius: 20px;
-        font-family: $font-stack;
+        font-family: font.$font-stack;
 
       }
     }
@@ -116,7 +121,7 @@ body {
   
 
     h1 {
-      color: $primary-color;
+      color: color.$primary-color;
       text-align: center;
     }
 
@@ -125,11 +130,11 @@ body {
       font-size: 2em;
       padding: $myPadding*2;
       margin-bottom: 0px;
-      color: $primary-color;
+      color: color.$primary-color;
     }
 
     h2 {
-      color: $primary-color;
+      color: color.$primary-color;
     }
 
     
@@ -137,7 +142,7 @@ body {
         border: 1px solid #ccc;
         padding: $myPadding;
         margin: 16px;
-        color: $primary-color;
+        color: color.$primary-color;
         background-color: $bgcolor;
       }
     
@@ -145,16 +150,16 @@ body {
 
     .success {
       @extend .message;
-      background-color: $secondary-color;
+      background-color: color.$secondary-color;
     }
     
     .error {
       @extend .message;
-      background-color: $tertiary-color;
+      background-color: color.$tertiary-color;
     }
     
     .warning {
       @extend .message;
-      background-color: $fourthiary-color;
+      background-color: color.$fourthiary-color;
     }
   
